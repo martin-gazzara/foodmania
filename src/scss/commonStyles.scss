@@ -3,6 +3,5 @@
 
 %mainStyle{
   @extend %heightFix;
-  @extend %applyTextFont;
-  background-color: $primaryColor;
+  @extend %applyTextFont
 }

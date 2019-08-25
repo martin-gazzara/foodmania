@@ -1,0 +1,15 @@
+@import '../../scss/constants.scss';
+
+.navBarContainer{
+  margin-top: 20px;
+  @extend %applyTextFont;
+  font-size: 16px;
+  .navBarItem{
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .navBarItem:hover{
+    background-color: red;
+  }
+}
