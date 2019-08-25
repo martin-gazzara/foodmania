@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './home.styles.scss';
 
 const Home = (props) => {
   return (
-    <div>
+    <div className="Home">
       Home screen
       <div>
         <div>

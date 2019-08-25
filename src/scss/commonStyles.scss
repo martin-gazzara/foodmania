@@ -1,0 +1,8 @@
+@import './constants.scss';
+@import './heightFix.scss';
+
+%mainStyle{
+  @extend %heightFix;
+  @extend %applyTextFont;
+  background-color: $primaryColor;
+}

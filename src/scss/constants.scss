@@ -1,0 +1,23 @@
+// color constants
+$yellow: #FBE8A6;
+$orange: #F4976C;
+$darkBlue: #303C6C;
+$lightBlue: #B4DFE5;
+$skyBlue: #D2FDFF;
+
+//font 
+
+@font-face {
+  font-family: Narrenschiff;
+  src: url(../assets/fonts/narrenschiff/Narrenschiff-Light.otf);
+}
+
+%applyTextFont {
+  font-family: 'Narrenschiff';
+  font-size: 50px;
+  color: $darkBlue;
+}
+
+// theme
+
+$primaryColor: $yellow;

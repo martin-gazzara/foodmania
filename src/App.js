@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
-import Home from './screens/Home';
+import Home from './screens/Home/Home';
 import Second from './screens/Second';
 import Third from './screens/Third';
-
 
 const App = () => {
   return(

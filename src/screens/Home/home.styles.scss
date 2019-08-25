@@ -1,0 +1,5 @@
+@import '../../scss/commonStyles.scss';
+
+.Home{
+  @extend %mainStyle;
+}
