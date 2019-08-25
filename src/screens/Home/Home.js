@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import get from 'lodash/get';
 
 import Header from '../../components/Header';

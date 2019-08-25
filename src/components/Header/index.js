@@ -9,6 +9,7 @@ const Header = () => {
       <img
         src={imageSrc}
         className="logo"
+        alt="logo"
       />
       <NavBar/>
     </div>

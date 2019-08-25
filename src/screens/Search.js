@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
-const Second = () => {
+const Search = () => {
   return(
     <div>
       <Header/>
@@ -13,4 +13,4 @@ const Second = () => {
   )
 }
 
-export default Second;
+export default Search;

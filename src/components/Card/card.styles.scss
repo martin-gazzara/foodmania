@@ -12,6 +12,9 @@ $imageSize: 280px;
   border-radius: 15px;
   overflow: hidden;
   margin: 10px;
+  .removeUnderline{
+    text-decoration: none;
+  }
   .imageContainer{
     display: flex;
     flex-direction: column;
@@ -21,7 +24,9 @@ $imageSize: 280px;
     width: $imageSize;
     height: $imageSize;
     overflow: hidden;
-    border-radius: 15px;
+    .image{
+      width: 400px
+    }
   }
   .footer{
     display: flex;
@@ -40,3 +45,11 @@ $imageSize: 280px;
     }
   }
 }
+
+.cardContainer:hover{
+  transform: scale(1.1,1.1);
+  box-shadow: 3px 3px 5px 6px rgb(211, 124, 84);
+  cursor: pointer;
+  transition: all 0.1s
+}
+

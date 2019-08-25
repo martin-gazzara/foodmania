@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
-const Third = () => {
+const About = () => {
   return(
     <div>
       <Header/>
@@ -13,4 +13,4 @@ const Third = () => {
   )
 }
 
-export default Third;
+export default About;
