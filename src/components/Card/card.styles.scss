@@ -1,0 +1,42 @@
+@import '../../scss/constants.scss';
+
+$cardSize: 300px;
+$imageSize: 280px;
+
+.cardContainer{
+  background-color: $orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $cardSize;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+  .imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: $imageSize;
+    height: $imageSize;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    .score{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .icon{
+        color: $darkRed;
+      }
+    }
+  }
+}

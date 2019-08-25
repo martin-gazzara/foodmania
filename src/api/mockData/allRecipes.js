@@ -1,4 +1,4 @@
-const response = {
+export const response = {
   count: 30,
   recipes: [
   {

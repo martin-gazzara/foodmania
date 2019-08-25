@@ -1,4 +1,4 @@
-const response = {
+export const response = {
   recipe: {
   publisher: "Closet Cooking",
   f2f_url: "http://food2fork.com/view/35382",

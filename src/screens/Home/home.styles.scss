@@ -2,4 +2,8 @@
 
 .Home{
   @extend %mainStyle;
+  .recipesContainer{
+    display: flex;
+    flex-flow: wrap;
+  }
 }
