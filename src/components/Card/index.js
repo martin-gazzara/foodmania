@@ -7,7 +7,7 @@ import './card.styles.scss';
 const Card = ({title, image_url, social_rank, publisher}) => {
   return(
     <div className='cardContainer'>
-      <Link to='/search' className="removeUnderline">
+      <Link to='/Recipe' className="removeUnderline">
         <div className="imageContainer">
           <img src={image_url} className='image' alt={title}/>
         </div>
@@ -16,11 +16,11 @@ const Card = ({title, image_url, social_rank, publisher}) => {
 
           <div className='score'>
             <Favorite className='icon'/>
-            <text className='scoreValue'>{social_rank}</text>
+            <p className='scoreValue'>{social_rank}</p>
           </div>
 
           <div>
-            <text className='publisher'>by {publisher}</text>
+            <p className='publisher'>by {publisher}</p>
           </div>
           
         </div>
