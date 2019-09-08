@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './screens/Home/Home';
-import Recipe from './screens/Recipe';
+import Recipe from './screens/Recipe/Recipe';
 import About from './screens/About';
 
 

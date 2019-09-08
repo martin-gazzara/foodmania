@@ -25,7 +25,8 @@ $imageSize: 280px;
     height: $imageSize;
     overflow: hidden;
     .image{
-      width: 400px
+      justify-content: center;
+      align-items: center
     }
   }
   .footer{

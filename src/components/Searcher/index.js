@@ -1,5 +1,7 @@
 import React from 'react';
 import { Search } from '@material-ui/icons'
+import { connect } from 'react-redux';
+import { searchRecipes } from '../../store/actions';
 import { withStyles } from '@material-ui/styles'
 import { Input } from '@material-ui/core';
 
@@ -17,30 +19,49 @@ class Searcher extends React.Component{
     super(props);
     this.state = {
       value: '',
-      showSearcher: false
+      showingSearcher: false
     }
     this.searcherRef = React.createRef();
-    this.toggleSearcher = this.toggleSearcher.bind(this);
+    this.handleKey = this.handleKey.bind(this);
+    this.showSearcher = this.showSearcher.bind(this);
+    this.hideSearcher = this.hideSearcher.bind(this);
   }
 
-  toggleSearcher(){
+  showSearcher(){
     this.setState({
-      showSearcher: !this.state.showSearcher
-    }, () => {if(this.state.showSearcher){ this.searcherRef.current.focus()}})
+      showingSearcher: true
+    }, () => this.searcherRef.current.focus())
+  }
+
+  hideSearcher(){
+    this.setState({
+      showingSearcher: false,
+      value: ''
+    })
+  }
+
+  handleKey(key){
+    const { searchRecipes } = this.props;
+    const queryToSearch = this.state.value;
+    if (key === 'Enter' ){
+      this.setState({value: '', showingSearcher: false});
+      searchRecipes(queryToSearch);
+    }
   }
 
   render(){
-    const { value, showSearcher } = this.state;
+    const { value, showingSearcher } = this.state;
     return(
       <div className='searcherContainer'>
-        <Search className='searchIcon' onClick={this.toggleSearcher}/>
+        <Search className='searchIcon' onClick={this.showSearcher}/>
         <Input
           value={value}
           onChange={ (e) => this.setState({value: e.target.value})}
           placeholder='Search for a recipe'
-          className={['searchInput', showSearcher ? 'showSearcher' : 'hideSearcher']}
-          onBlur={this.toggleSearcher}
+          className={['searchInput', showingSearcher ? 'showSearcher' : 'hideSearcher']}
+          onBlur={this.hideSearcher}
           inputRef={this.searcherRef}
+          onKeyPress={ (e) => this.handleKey(e.key)}
         />
       </div>
     )
@@ -48,4 +69,10 @@ class Searcher extends React.Component{
 
 }
 
-export default withStyles(inputSearcherStyles)(Searcher);
+const mapDispatchToProps = {
+  searchRecipes
+}
+
+const ConnectedComponent = connect(null, mapDispatchToProps)(Searcher);
+
+export default withStyles(inputSearcherStyles)(ConnectedComponent);
